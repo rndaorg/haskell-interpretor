@@ -1,0 +1,8 @@
+# .ghcid
+src/*.hs
+src/**/*.hs
+
+dist/*
+dist-newstyle/*
+*.o
+*.hi
