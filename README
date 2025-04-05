@@ -1,0 +1,28 @@
+
+```
+
+# Start container
+docker-compose up -d
+
+# Enter container
+docker-compose exec haskell-dev bash
+
+# Inside container: Start ghcid with corrected command
+ghcid --command="cabal repl" --restart="myproject-exe"
+
+# Edit files locally in your editor
+# ghcid will detect changes and restart the executable
+
+```
+
+```
+
+# Inside container: Start ghcid
+ghcid --command="cabal repl" --restart
+
+# To run the program (in another terminal):
+docker-compose exec haskell-dev cabal run
+
+# To stop:
+docker-compose down
+```
